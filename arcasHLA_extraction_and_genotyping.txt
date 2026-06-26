@@ -1,0 +1,17 @@
+# arcasHLA: HLA read extraction and genotype inference from BAM files
+
+# Step 1: Extract HLA-related reads from a sorted BAM file
+./arcasHLA extract \
+    ./test.bam \
+    -o ./output \
+    -t 8 \
+    -v
+
+# Step 2: HLA genotyping from the extracted paired-end FASTQ files
+./arcasHLA genotype \
+    ./output/test.extracted.1.fq.gz \
+    ./output/test.extracted.2.fq.gz \
+    -g A,B,C,DPB1,DQB1,DQA1,DRB1 \
+    -o ./output \
+    -t 8 \
+    -v
