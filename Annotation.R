@@ -53,10 +53,6 @@ Dataset[['ann_celltypist_lowres']] = lowres_preds_list$predicted_labels
 Dataset[['ann_celltypist_highres_conf_score']] = highres_preds_list$conf_score
 Dataset[['ann_celltypist_lowres_conf_score']] = lowres_preds_list$conf_score
 
-dim(Dataset@meta.data)
-
-table(Dataset@meta.data$ce)
-
 ######################################
 
 # Celltypist highres
