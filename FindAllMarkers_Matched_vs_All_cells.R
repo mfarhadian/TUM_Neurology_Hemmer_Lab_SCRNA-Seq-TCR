@@ -243,9 +243,6 @@ message(sprintf("Post-filter (PAIRED-only) -> matched_motif: %d | bg_all_other: 
 if (n_matched < 1) stop("No matched motif cells (PAIRED-only) - nothing to compare.")
 if (n_bg < 1)      stop("No background cells (PAIRED-only) - nothing to compare.")
 
-# ----------------------- Assay ----------------------------------------------
-DefaultAssay(all_combo_de) <- "SCT"
-assay_used <- "SCT"
 
 # ----------------------- DE (Wilcoxon) ---------------------------------------
 message("Running DE (Wilcoxon) on PAIRED-only cells: matched_motif vs bg_all_other ...")
