@@ -78,11 +78,6 @@ combo = subset(combo, subset=percentage.rbc < 0.0000005)
 dim(combo@meta.data)
 #############################
 
-DefaultAssay(all_combo)
-DefaultAssay(all_combo) = "SCT"
-DefaultAssay(all_combo)
-
-
 # UMAP over a range of PCs and resolutions
 # repeat with different parameters to test robustness of clusters
 umap_change_pcs = function(x,y){
